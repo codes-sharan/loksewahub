@@ -1,0 +1,48 @@
+.homepage {
+    padding: 20px;
+  }
+  
+  .introduction, .features, .offerings, .success-stories, .call-to-action {
+    margin-bottom: 20px;
+  }
+  
+  .introduction h2, .features h2, .offerings h2, .success-stories h2, .call-to-action h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .features ul, .offerings ul {
+    padding-left: 20px;
+  }
+  
+  .features li, .offerings li {
+    margin-bottom: 10px;
+  }
+  
+  .success-stories p {
+    font-size: 1.2rem;
+  }
+
+  /* h1, h2 {
+    background-color: rgb(240, 199, 199);
+  } */
+
+  .home-first {
+    display: flex;
+    margin: 2%;
+  }
+
+  .homefirstimage {
+    height: 300px;
+    margin-left: 10%;
+  }
+
+  .header {
+   align-content: center;
+   background-color: rgba(35, 135, 235, 0.6);
+   color: rgb(235, 75, 75);
+   justify-content: center;
+   padding: 0% 5%;
+   font-weight:bold;
+  }
+  
