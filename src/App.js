@@ -57,6 +57,7 @@ function App() {
           <Route path="/results" element={<Results score={score} totalQuestions={questions.length} />} />
         </Routes>
         {/* </main> */}
+
         </div>
         <Footer />
       </div>
