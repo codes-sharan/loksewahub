@@ -42,9 +42,7 @@ function App() {
           <Route path='/contactus' element={<ContactUs/>} />
   
 
-          <Route
-            path="/quiz"
-            element={
+          <Route path="/quiz" element={
               <Quiz
                 score={score}
                 setScore={setScore}

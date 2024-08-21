@@ -2,7 +2,8 @@ import React from 'react';
 import './Home.css';
 import homefirstimage from "../homefirstimage.jpeg";
 import NewsTicker from '../components/NewsTicker';
-import ContactForm from '../ContactForm';
+
+
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const Home = () => {
       </div>
 
       </div>
+
       
       <section className="introduction">
         <h2>Achieve Your Dreams with LoksewaHub</h2>
@@ -66,7 +68,6 @@ const Home = () => {
           Embark on your journey to success with LoksewaHub. Sign up now and get access to our exclusive resources and start your preparation on the right track. Together, let's achieve your dreams of serving the nation.
         </p>
         <a href="mailto:helloloksewahub@gmail.com" className="contact-link">Contact Us</a>
-        <ContactForm/>
 
       </section>
 

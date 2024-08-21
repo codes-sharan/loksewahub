@@ -1,0 +1,10 @@
+/* SlideIn.css */
+.slide-in {
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+  }
+  
+  .slide-in.visible {
+    transform: translateX(0);
+  }
+  

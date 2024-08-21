@@ -1,11 +1,11 @@
 import React from 'react';
-import UserForm from '../components/UserForm';
+import ContactForm from '../components/ContactForm';
 
 function ContactUs() {
   return (
     <div>
         <h3> Please fill the form to contact us!</h3>
-      <UserForm/>
+      <ContactForm/>
     </div>
   )
 }
