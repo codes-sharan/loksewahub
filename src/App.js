@@ -10,6 +10,8 @@ import Syllabus from "./pages/Syllabus";
 import ContactUs from "./pages/ContactUs";
 import OldQuestions from "./pages/OldQuestions";
 import Courses from "./pages/Courses";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -20,11 +22,16 @@ function App() {
         <div className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/syllabus" element={<Syllabus />} />
-            <Route path="/oldquestions" element={<OldQuestions />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/quiz" element={<Quiz />} />
+
+            <Route path="/login" element={<Login />} />
+
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/syllabus" element={<Syllabus />} />
+              <Route path="/oldquestions" element={<OldQuestions />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/quiz" element={<Quiz />} />
+            </Route>
           </Routes>
         </div>
         <Footer />
