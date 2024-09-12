@@ -1,42 +1,65 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const questions = [
-  { question: 'What is the capital of France?', options: ['Paris', 'London', 'Berlin', 'Madrid'], answer: 'Paris' },
-  { question: 'What is the largest ocean on Earth?', options: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'], answer: 'Pacific Ocean' },
-  { question: 'Which country is known as the Land of the Rising Sun?', options: ['China', 'Japan', 'Thailand', 'South Korea'], answer: 'Japan' },
-  { question: 'Who wrote the play "Romeo and Juliet"?', options: ['William Shakespeare', 'Charles Dickens', 'Jane Austen', 'Mark Twain'], answer: 'William Shakespeare' },
-  { question: 'Who is known as the father of modern physics?', options: ['Isaac Newton', 'Albert Einstein', 'Galileo Galilei', 'Niels Bohr'], answer: 'Albert Einstein' },
-  { question: 'What is the name of the famous clock tower in London?', options: ['Big Ben', 'Eiffel Tower', 'Leaning Tower of Pisa', 'Colosseum'], answer: 'Big Ben' },
+// Sample data for quiz sets
+const quizSets = [
+  {
+    id: 1,
+    title: "Quiz Set 1",
+    image: "../quiz1.jpg", // Make sure these images are in your public/images folder
+    description: "Test your knowledge with Arts.",
+    url: "https://api.loksewahub.com",
+  },
+  {
+    id: 2,
+    title: "Quiz Set 2",
+    image: "/quiz2.jpg",
+    description: "Dive into challenging questions with Culture.",
+    url: "https://quiz.loksewahub.com",
+  },
+  {
+    id: 3,
+    title: "Quiz Set 3",
+    image: "/quiz3.jpg",
+    description: "Check your skills in Religion.",
+    url: "https://api.loksewahub.com",
+  },
+  {
+    id: 4,
+    title: "Quiz Set 4",
+    image: "/quiz4.jpg",
+    description: "Explore new topics with Science.",
+    url: "https://test.loksewahub.com",
+  },
+  {
+    id: 5,
+    title: "Quiz Set 5",
+    image: "/quiz5.jpg",
+    description: "Take on the ultimate challenge in Politics.",
+    url: "https://new.loksewahub.com",
+  },
 ];
 
-function Quiz({ score, setScore, currentQuestion, setCurrentQuestion }) {
-  const navigate = useNavigate();
-
-  const handleAnswerOptionClick = (option) => {
-    if (option === questions[currentQuestion].answer) {
-      setScore(score + 1);
-    }
-  
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      navigate('/results', { state: { score, totalQuestions: questions.length } });
-    }
-  };
-  
-
+const Quiz = () => {
   return (
-    <div>
-      <h2>{questions[currentQuestion].question}</h2>
-      {questions[currentQuestion].options.map((option, index) => (
-        <button key={index} onClick={() => handleAnswerOptionClick(option)}>
-          {option}
-        </button>
-      ))}
-    </div>
+    <>
+      <div className="d-flex flex-wrap">
+        {quizSets.map((quiz) => (
+          <Card key={quiz.id} style={{ width: "18rem", margin: "1rem" }}>
+            <Card.Img variant="top" src={quiz.image} alt={quiz.title} />
+            <Card.Body>
+              <Card.Title>{quiz.title}</Card.Title>
+              <Card.Text>{quiz.description}</Card.Text>
+              <Link to={quiz.url}>
+                <Button variant="primary">Start Quiz</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
+    </>
   );
-}
+};
 
 export default Quiz;

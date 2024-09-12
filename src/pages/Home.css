@@ -1,54 +1,35 @@
-.homepage {
-    padding: 20px;
-    align-items: center;
-  }
+/* Home.css */
 
-  .home-first{
-    justify-content: center;
-    font-family:cursive;
-  }
-  
-  .introduction, .features, .offerings, .success-stories, .call-to-action {
-    margin-bottom: 20px;
-  }
-  
-  .introduction h2, .features h2, .offerings h2, .success-stories h2, .call-to-action h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .features ul, .offerings ul {
-    padding-left: 20px;
-  }
-  
-  .features li, .offerings li {
-    margin-bottom: 10px;
-  }
-  
-  .success-stories p {
-    font-size: 1.2rem;
-  }
+/* Animation for text */
+.text-animation {
+  animation: slideIn 2s ease-out;
+}
 
-  /* h1, h2 {
-    background-color: rgb(240, 199, 199);
-  } */
-
-  .home-first {
-    display: flex;
-    margin: 2%;
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-
-  .homefirstimage {
-    height: 300px;
-    margin-left:5%;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  .header {
-   align-content: center;
-   background-color: rgba(163, 197, 231, 0.6);
-   color: rgb(0, 0, 0);
-   justify-content: center;
-   padding: 0% 5%;
-   font-weight:bold;
-  }
-  
+/* Resize image */
+.img-small {
+  max-width: 60%; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+.display-4 {
+  font-size: 3rem; /* Larger text size for the title */
+}
+
+.lead {
+  font-size: 1.25rem; /* Slightly larger text size for the description */
+}
+
+/* Text container background and size */
